@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.LoginActivity">
+
+    <ImageView
+        android:id="@+id/img_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:contentDescription="@string/image_signup"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal2"
+        app:srcCompat="@drawable/image_welcome" />
+
+    <TextView
+        android:id="@+id/tx_login"
+        android:alpha="0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/login"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal" />
+
+    <TextView
+        android:id="@+id/tx_email"
+        android:alpha="0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/email"
+        app:layout_constraintEnd_toEndOf="@+id/tx_login"
+        app:layout_constraintStart_toStartOf="@+id/tx_login"
+        app:layout_constraintTop_toBottomOf="@+id/tx_login" />
+
+    <com.dicoding.mystoryapp.customview.EmailEditText
+        android:id="@+id/edit_email"
+        android:alpha="0"
+        android:hint="@string/email_hint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/tx_login"
+        app:layout_constraintStart_toStartOf="@+id/tx_login"
+        app:layout_constraintTop_toBottomOf="@+id/tx_email"
+        android:drawableStart="@drawable/ic_baseline_email_24"/>
+
+    <TextView
+        android:id="@+id/tx_password"
+        android:alpha="0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/password"
+        app:layout_constraintEnd_toEndOf="@+id/tx_login"
+        app:layout_constraintStart_toStartOf="@+id/tx_login"
+        app:layout_constraintTop_toBottomOf="@+id/edit_email" />
+
+    <com.dicoding.mystoryapp.customview.PasswordEditText
+        android:id="@+id/edit_password"
+        android:alpha="0"
+        android:inputType="textPassword"
+        android:hint="@string/password_hint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/tx_login"
+        app:layout_constraintStart_toStartOf="@+id/tx_login"
+        app:layout_constraintTop_toBottomOf="@+id/tx_password"
+        android:drawableStart="@drawable/ic_baseline_https_24"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:alpha="0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue_navy"
+        android:text="@string/login"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/tx_login"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tx_login"
+        app:layout_constraintTop_toBottomOf="@+id/edit_password" />
+
+    <TextView
+        android:id="@+id/tx_des"
+        android:alpha="0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/login_description"
+        app:layout_constraintStart_toStartOf="@+id/tx_login"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+    <TextView
+        android:id="@+id/tx_newsignup"
+        android:alpha="0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/signup"
+        android:textColor="@color/blue_navy"
+        app:layout_constraintEnd_toEndOf="@+id/tx_login"
+        app:layout_constraintStart_toEndOf="@+id/tx_des"
+        app:layout_constraintTop_toTopOf="@+id/tx_des" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.3"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal2"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.05"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/copyrightTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/copyright"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/view_progressbar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0"
+        android:background="@color/transparent_purple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

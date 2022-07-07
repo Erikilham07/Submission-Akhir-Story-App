@@ -1,0 +1,120 @@
+Skenario Testing
+Submission 2 Intermediate Android Dicoding (My Story App)
+
+Unit Testing
+
+Class -> LoginViewModelTest :
+
+1. Login success and Result Success
+- Memastikan mengembalikan Result.Success
+- Memastikan response tidak bernilai null
+- Memastikan bahwa method login telah dipanggil
+- memastikan actual response dan dummy sama
+
+2. Signup failed and Result Error
+- Memastikan response tidak bernilai null
+- Memastikan mengembalikan Result.Error
+
+3. Save token successfully
+- Memastikan bahwa token berhasil disimpan
+
+==================================================================================================
+
+Class -> MainViewModelTest :
+
+1. Logout successfully
+- Memastikan logout berhasil
+- Memastikan method userRepository.logout telah dipanggil
+
+2. get token successfully
+- Memastikan bahwa token berhasil dipanggil
+- Memastikan bahwa token tidak bernilai null
+
+3. get session login successfully
+- Memastikan bahwa session berhasil dipanggil
+- Memastikan bahwa session tidak bernilai null
+
+4. when get list story should not null
+- memastikan data dengan paging berhasil dipanggil
+- memastikan data tidak bernilai null
+- memastikan jumlah data dummy dan aktual sama
+
+==================================================================================================
+
+Class -> MapsViewModelTest :
+
+1. when get Maps story Should Not Null and Return Success
+- Memastikan data tidak bernilai null
+- Memastikan response mengembalikan Result.Success
+- Memastikan data dummy sama dengan aktual
+- Memastikan jumlah data sama
+
+2. when Network error Should Return Error
+- Memastikan data tidak bernilai null
+- Memastikan mengembalikan Result.Error
+
+==================================================================================================
+
+Class -> SignupViewModelTest :
+
+1. Signup and Result Success
+- Memastikan mengembalikan Result.Success
+- Memastikan response tidak bernilai null
+- Memastikan bahwa method userRepository.register telah dipanggil
+- memastikan actual response dan dummy sama
+
+2. Signup failed and Result Error
+- Memastikan response tidak bernilai null
+- Memastikan mengembalikan Result.Error
+
+==================================================================================================
+
+Class -> StoryViewModelTest :
+
+1. Story success
+- memastikan bahwa response tidak null
+- memastikan bahwa response mengembalikan Result.Success
+
+2. Story failed
+- memastikan bahwa response tidak null
+- memastikan bahwa response mengembalikan Result.Error
+
+==================================================================================================
+
+Class -> MainRepositoryTest :
+
+1. Login response Should Not Null
+- memastikan bahwa response tidak null
+- memastikan bahwa data dummy sama dengan data aktual
+
+2. Register response Should Not Null
+- memastikan bahwa response tidak null
+- memastikan bahwa data dummy sama dengan data aktual
+
+==================================================================================================
+
+Class -> StoryRepositoryTest :
+
+1. Stories location Should Not Null
+- memastikan bahwa data tidak null
+- memastikan bahwa data aktual sama dengan data expected
+
+2. Upload story successfully
+- Memastikan upload story berhasil dan response tidak null
+- memastikan response aktual sama dengan expected response
+
+3. Stories paging successfully
+- memastikan bahwa data tidak null
+- memastikan bahwa data aktual sama dengan data expected
+
+==================================================================================================
+==================================================================================================
+==================================================================================================
+
+Instrumentation Test
+
+Class -> MainActivityTest :
+
+1. getStoriesSuccess
+- memastikan activity telah terbuka
+- memastikan recycleview telah tampil pada layar
